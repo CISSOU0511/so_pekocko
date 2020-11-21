@@ -1,4 +1,9 @@
+/*modèle de données*/
+/*middleware*/
 const mongoose = require('mongoose');
+
+/*plugin*/
+
 const uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = mongoose.Schema({

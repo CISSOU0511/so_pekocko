@@ -1,4 +1,6 @@
+/*package de chiffrement */
 const bcrypt = require('bcrypt');
+/*token d'authentification*/
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');

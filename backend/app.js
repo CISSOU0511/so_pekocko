@@ -12,6 +12,9 @@ const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
 const app = express();
+
+/*connexion mongoDB*/
+
 mongoose.connect(config.mongoURI,
   {
     useNewUrlParser: true,
@@ -20,6 +23,7 @@ mongoose.connect(config.mongoURI,
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
+  /*headers CORS*/
 app.use((_req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
